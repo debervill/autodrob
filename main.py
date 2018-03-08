@@ -35,6 +35,8 @@ class MainPage(wx.Frame):
         self.Centre(wx.BOTH)
 
 
+
+
 app = wx.App(False)
 frame = MainPage(None)
 frame.Show()
