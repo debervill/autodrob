@@ -43,8 +43,8 @@ class SecondPage(wx.Frame):
 
     # Virtual event handlers, overide them in your derived class
     def lab1(self, event):
-        from gui import third_page
-        nex_page = third_page.MainFrame()
+        from lab1 import lab1
+        nex_page = lab1.MainFrame()
         nex_page.Show()
 
 
