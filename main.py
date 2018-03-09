@@ -11,7 +11,7 @@ class MainPage(wx.Frame):
 
         self.SetSizeHints(wx.DefaultSize, wx.DefaultSize)
 
-        sizer_all = wx.FlexGridSizer(2, 2, 0, 0)
+        sizer_all = wx.FlexGridSizer(3, 2, 0, 0)
         sizer_all.SetFlexibleDirection(wx.BOTH)
         sizer_all.SetNonFlexibleGrowMode(wx.FLEX_GROWMODE_SPECIFIED)
 
@@ -29,10 +29,24 @@ class MainPage(wx.Frame):
         self.pswd_txt = wx.TextCtrl(self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, style=wx.TE_PASSWORD)
         sizer_all.Add(self.pswd_txt, 0, wx.ALL, 5)
 
+
+        self.lgn_button = wx.Button(self, wx.ID_ANY, u"Войти")
+        sizer_all.Add(self.lgn_button,0, wx.ALL, 5)
+
         self.SetSizer(sizer_all)
         self.Layout()
 
         self.Centre(wx.BOTH)
+
+        # Connect Events
+        self.lgn_button.Bind(wx.EVT_BUTTON, self.login)
+
+
+    def login(self, event):
+        from gui import second_page
+        nxt_page = second_page.SecondPage(None)
+        nxt_page.Show()
+        nxt_page.Destroy()
 
 
 
