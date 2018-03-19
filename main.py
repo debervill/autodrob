@@ -48,9 +48,6 @@ class MainPage(wx.Frame):
         nxt_page.Show()
         nxt_page.Destroy()
 
-
-
-
 app = wx.App(False)
 frame = MainPage(None)
 frame.Show()

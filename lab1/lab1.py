@@ -1,8 +1,16 @@
 import wx
+from docx import Document
 
 class Ttheory(wx.Panel):
     def __init__(self, parent):
         wx.Panel.__init__(self, parent)
+        self.doc_text = wx.StaticText(self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, 0)
+
+
+    def get_theor(self):
+        doc = Document('test1.docx')
+        text_doc = doc.paragrapghs()
+        self.doc_text.SetLabel(text_doc)
 
 
 class Labs(wx.Panel):
