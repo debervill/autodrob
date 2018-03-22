@@ -41,7 +41,6 @@ class MainPage(wx.Frame):
         # Connect Events
         self.lgn_button.Bind(wx.EVT_BUTTON, self.login)
 
-
     def login(self, event):
         from gui import second_page
         nxt_page = second_page.SecondPage(None)

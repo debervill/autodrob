@@ -13,20 +13,20 @@ class SecondPage(wx.Frame):
         fgSizer3.SetFlexibleDirection(wx.BOTH)
         fgSizer3.SetNonFlexibleGrowMode(wx.FLEX_GROWMODE_SPECIFIED)
 
-        self.m_staticText5 = wx.StaticText(self, wx.ID_ANY, u"MyLabel", wx.DefaultPosition, wx.DefaultSize, 0)
+        self.m_staticText5 = wx.StaticText(self, wx.ID_ANY, u"Выберите лабораторную работу", wx.DefaultPosition, wx.DefaultSize, 0)
         self.m_staticText5.Wrap(-1)
         fgSizer3.Add(self.m_staticText5, 0, wx.ALL, 5)
 
-        self.m_radioBtn9 = wx.RadioButton(self, wx.ID_ANY, u"RadioBtn", wx.DefaultPosition, wx.DefaultSize, 0)
+        self.m_radioBtn9 = wx.RadioButton(self, wx.ID_ANY, u"Лабораторная работа  № 1.", wx.DefaultPosition, wx.DefaultSize, 0)
         fgSizer3.Add(self.m_radioBtn9, 0, wx.ALL, 5)
 
-        self.m_radioBtn10 = wx.RadioButton(self, wx.ID_ANY, u"RadioBtn", wx.DefaultPosition, wx.DefaultSize, 0)
+        self.m_radioBtn10 = wx.RadioButton(self, wx.ID_ANY, u"Лабораторная работа  № 2.", wx.DefaultPosition, wx.DefaultSize, 0)
         fgSizer3.Add(self.m_radioBtn10, 0, wx.ALL, 5)
 
-        self.m_radioBtn11 = wx.RadioButton(self, wx.ID_ANY, u"RadioBtn", wx.DefaultPosition, wx.DefaultSize, 0)
+        self.m_radioBtn11 = wx.RadioButton(self, wx.ID_ANY, u"Лабораторная работа  № 3.", wx.DefaultPosition, wx.DefaultSize, 0)
         fgSizer3.Add(self.m_radioBtn11, 0, wx.ALL, 5)
 
-        self.m_radioBtn12 = wx.RadioButton(self, wx.ID_ANY, u"RadioBtn", wx.DefaultPosition, wx.DefaultSize, 0)
+        self.m_radioBtn12 = wx.RadioButton(self, wx.ID_ANY, u"Лабораторная работа  № 4.", wx.DefaultPosition, wx.DefaultSize, 0)
         fgSizer3.Add(self.m_radioBtn12, 0, wx.ALL, 5)
 
         self.SetSizer(fgSizer3)

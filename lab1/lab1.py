@@ -4,7 +4,7 @@ from docx import Document
 class Ttheory(wx.Panel):
     def __init__(self, parent):
         wx.Panel.__init__(self, parent)
-        self.doc_text = wx.StaticText(self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, 0)
+
 
 
     def get_theor(self):
