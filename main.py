@@ -78,22 +78,24 @@ class MainFramePanel(wx.Panel):
 
 
     def go_page2(self, event):
-
-
         values = []
+
         name = self.inpt_name.GetValue()
         name = name.replace(' ', '')
         print(name)
 
         familia = self.inpt_familia.GetValue()
+        familia = familia.replace(' ','')
         if len(familia) == 0:
             self.empty_pole()
             return
 
         group = self.inpt_group.GetValue()
+        group = group.replace(' ','')
         if len(group) == 0:
             self.empty_pole()
             return
+
         zach_number = self.inpt_zachetka.GetValue()
         zach_number = zach_number.replace(' ', '')
         if len(zach_number) == 0:
