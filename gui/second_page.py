@@ -1,13 +1,13 @@
 import wx
 
-
-class SecondPage(wx.Frame):
-
+class SecondPagePanel(wx.Panel):
     def __init__(self, parent):
-        wx.Frame.__init__(self, parent, id=wx.ID_ANY, title=u"SecondPage", pos=wx.DefaultPosition,
-                          size=wx.Size(500, 300), style=wx.DEFAULT_FRAME_STYLE | wx.TAB_TRAVERSAL)
+        wx.Panel.__init__(self, parent, id=wx.ID_ANY, pos=wx.DefaultPosition, size=wx.Size(500, 500),
+                          style=wx.FULLSCREEN_NOBORDER)
+        self.frame = parent
 
-        self.SetSizeHints(wx.DefaultSize, wx.DefaultSize)
+
+
 
         fgSizer3 = wx.FlexGridSizer(0, 1, 0, 0)
         fgSizer3.SetFlexibleDirection(wx.BOTH)
@@ -45,6 +45,17 @@ class SecondPage(wx.Frame):
         from labs.lab1 import lab1
         nex_page = lab1.MainFrame()
         nex_page.Show()
+class SecondPage(wx.Frame):
+
+    def __init__(self, parent):
+        wx.Frame.__init__(self, parent, id=wx.ID_ANY, title=u"SecondPage", pos=wx.DefaultPosition,
+                          size=wx.Size(500, 300), style=wx.DEFAULT_FRAME_STYLE | wx.TAB_TRAVERSAL)
+
+        self.SetSizeHints(wx.DefaultSize, wx.DefaultSize)
+
+        self.Centre(wx.BOTH)
+        self.Maximize(True)
+        panel = SecondPagePanel(self)
 
 def run_page(self):
     app = wx.App(False)

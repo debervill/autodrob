@@ -109,7 +109,7 @@ class MainFramePanel(wx.Panel):
 
         print(values)
         self.frame.Hide()
-        second_page.frame.Show()
+        second_page.run_page(self)
 
 
 
