@@ -43,16 +43,11 @@ class SecondPage(wx.Frame):
 
     # Virtual event handlers, overide them in your derived class
     def lab1(self, event):
-<<<<<<< HEAD
         from labs.lab1 import lab1
         nex_page = lab1.MainFrame()
         nex_page.Show()
-        self.Destroy()
-=======
-        from lab1 import lab1
-        nex_page = lab1.MainFrame()
-        nex_page.Show()
->>>>>>> origin/dev
+
+
 
 
 app = wx.App(False)
