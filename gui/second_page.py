@@ -45,10 +45,11 @@ class SecondPage(wx.Frame):
         from labs.lab1 import lab1
         nex_page = lab1.MainFrame()
         nex_page.Show()
-    def run_page(self):
-        app = wx.App(False)
-        frame = SecondPage(None)
-        frame.Show()
-        app.MainLoop()
+
+def run_page(self):
+    app = wx.App(False)
+    frame = SecondPage(None)
+    frame.Show()
+    app.MainLoop()
 
 
