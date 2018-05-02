@@ -9,12 +9,12 @@ class MainFramePanel(wx.Panel):
 
         bSizer1 = wx.BoxSizer(wx.VERTICAL)
 
-        self.lbl_kaf = wx.StaticText(self, wx.ID_ANY, u"Кафедра «Организация и безопасность движения»",
+        self.lbl_kaf = wx.StaticText(self, wx.ID_ANY, u"Кафедра «Дорожные машины»",
                                      wx.DefaultPosition, wx.DefaultSize, 0)
         self.lbl_kaf.Wrap(-1)
         bSizer1.Add(self.lbl_kaf, 0, wx.ALIGN_CENTER | wx.ALL, 5)
 
-        self.lbl_NameProg = wx.StaticText(self, wx.ID_ANY, u"Расчёт цикла светофорного регулирования на перекрёстке",
+        self.lbl_NameProg = wx.StaticText(self, wx.ID_ANY, u"Подбор параметров дробильного комплекса",
                                           wx.DefaultPosition, wx.DefaultSize, 0)
         self.lbl_NameProg.Wrap(-1)
         bSizer1.Add(self.lbl_NameProg, 0, wx.ALIGN_CENTER | wx.ALL, 5)
@@ -106,7 +106,7 @@ class MainFramePanel(wx.Panel):
 
         print(values)
         self.frame.Hide()
-        page2.MainFramePanel.run_page(self)
+
 
 
 
