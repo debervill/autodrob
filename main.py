@@ -78,11 +78,11 @@ class MainFramePanel(wx.Panel):
 
 
     def go_page2(self, event):
+        from gui import second_page
         values = []
 
         name = self.inpt_name.GetValue()
         name = name.replace(' ', '')
-        print(name)
 
         familia = self.inpt_familia.GetValue()
         familia = familia.replace(' ','')
@@ -105,9 +105,11 @@ class MainFramePanel(wx.Panel):
         values.append(name)
         values.append(familia)
         values.append(group)
+        values.append(zach_number)
 
         print(values)
         self.frame.Hide()
+        second_page.frame.Show()
 
 
 

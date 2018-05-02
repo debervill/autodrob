@@ -38,21 +38,17 @@ class SecondPage(wx.Frame):
         self.m_radioBtn9.Bind(wx.EVT_LEFT_DCLICK, self.lab1)
         self.m_radioBtn10.Bind(wx.EVT_LEFT_DCLICK, self.lab1)
 
-    def __del__(self):
-        pass
+
 
     # Virtual event handlers, overide them in your derived class
     def lab1(self, event):
         from labs.lab1 import lab1
         nex_page = lab1.MainFrame()
         nex_page.Show()
-
-
-
-
-app = wx.App(False)
-frame = SecondPage(None)
-frame.Show()
-app.MainLoop()
+    def run_page(self):
+        app = wx.App(False)
+        frame = SecondPage(None)
+        frame.Show()
+        app.MainLoop()
 
 
