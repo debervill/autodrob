@@ -64,7 +64,8 @@ class MainFramePanel(wx.Panel):
         bSizer3.Add(self.m_checkBox19, 0, wx.ALL, 5)
 
         bsizer1.Add(bSizer3, 0, wx.EXPAND, 5)
-
+        # Добавление страниц в noteboock. По данном алгоритму можено (?) динамически доабавлять страницы
+        # for i in range(10) и дергать функицию создания страницы
         page1 = PageOne(self.m_notebook1)
         page2 = PageOne1(self.m_notebook1)
         page3 = PageOne2(self.m_notebook1)
