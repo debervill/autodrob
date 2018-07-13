@@ -6,9 +6,6 @@ class SecondPagePanel(wx.Panel):
                           style=wx.FULLSCREEN_NOBORDER)
         self.frame = parent
 
-
-
-
         fgSizer3 = wx.FlexGridSizer(0, 1, 0, 0)
         fgSizer3.SetFlexibleDirection(wx.BOTH)
         fgSizer3.SetNonFlexibleGrowMode(wx.FLEX_GROWMODE_SPECIFIED)
@@ -36,7 +33,7 @@ class SecondPagePanel(wx.Panel):
 
         # Connect Events
         self.m_radioBtn9.Bind(wx.EVT_LEFT_DCLICK, self.lab1)
-        self.m_radioBtn10.Bind(wx.EVT_LEFT_DCLICK, self.lab1)
+
 
 
 
@@ -45,6 +42,7 @@ class SecondPagePanel(wx.Panel):
         from labs.lab1 import lab1
         nex_page = lab1.MainFrame()
         nex_page.Show()
+
 class SecondPage(wx.Frame):
 
     def __init__(self, parent):
