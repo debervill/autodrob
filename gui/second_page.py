@@ -17,14 +17,6 @@ class SecondPagePanel(wx.Panel):
         self.m_radioBtn9 = wx.RadioButton(self, wx.ID_ANY, u"Лабораторная работа  № 1.", wx.DefaultPosition, wx.DefaultSize, 0)
         fgSizer3.Add(self.m_radioBtn9, 0, wx.ALL, 5)
 
-        self.m_radioBtn10 = wx.RadioButton(self, wx.ID_ANY, u"Лабораторная работа  № 2.", wx.DefaultPosition, wx.DefaultSize, 0)
-        fgSizer3.Add(self.m_radioBtn10, 0, wx.ALL, 5)
-
-        self.m_radioBtn11 = wx.RadioButton(self, wx.ID_ANY, u"Лабораторная работа  № 3.", wx.DefaultPosition, wx.DefaultSize, 0)
-        fgSizer3.Add(self.m_radioBtn11, 0, wx.ALL, 5)
-
-        self.m_radioBtn12 = wx.RadioButton(self, wx.ID_ANY, u"Лабораторная работа  № 4.", wx.DefaultPosition, wx.DefaultSize, 0)
-        fgSizer3.Add(self.m_radioBtn12, 0, wx.ALL, 5)
 
         self.SetSizer(fgSizer3)
         self.Layout()
@@ -33,8 +25,6 @@ class SecondPagePanel(wx.Panel):
 
         # Connect Events
         self.m_radioBtn9.Bind(wx.EVT_LEFT_DCLICK, self.lab1)
-
-
 
 
     # Virtual event handlers, overide them in your derived class
