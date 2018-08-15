@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import wx
-
+import main
 
 class MainFramePanel(wx.Panel):
     def __init__(self, parent):
@@ -59,8 +59,8 @@ class MainFramePanel(wx.Panel):
         bSizer1.Add(fgSizer1, 1, wx.EXPAND, 5)
         gSizer1 = wx.GridSizer(0, 2, 0, 0)
 
-        self.btn_settongs = wx.Button(self, wx.ID_ANY, u"Настройки", wx.DefaultPosition, wx.DefaultSize, 0)
-        gSizer1.Add(self.btn_settongs, 0, wx.ALIGN_BOTTOM | wx.ALL, 5)
+        self.btn_settings = wx.Button(self, wx.ID_ANY, u"Настройки", wx.DefaultPosition, wx.DefaultSize, 0)
+        gSizer1.Add(self.btn_settings, 0, wx.ALIGN_BOTTOM | wx.ALL, 5)
 
         self.btn_page2 = wx.Button(self, wx.ID_ANY, u"Далее", wx.DefaultPosition, wx.DefaultSize, 0)
         gSizer1.Add(self.btn_page2, 0, wx.ALIGN_BOTTOM | wx.ALIGN_RIGHT | wx.ALL, 5)
@@ -68,59 +68,21 @@ class MainFramePanel(wx.Panel):
         bSizer1.Add(gSizer1, 1, wx.EXPAND, 5)
 
         self.SetSizer(bSizer1)
-        self._bindGuiEvents()
         self.Layout()
 
+        self.btn_page2.Bind(wx.EVT_BUTTON, main.MainPage.go_page2)
+        self.btn_settings.Bind(wx.EVT_BUTTON, main.MainPage.change_settings)
 
-
-    def empty_pole(self):
-        dlg = wx.MessageDialog(self, 'Не все поля заполнены. Заполните все поля перед продолжением', 'Ошибка', wx.OK)
-        val = dlg.ShowModal()
-        if val == wx.ID_OK:
-            dlg.Destroy()
-
-    def _bindGuiEvents(self):
-        self.btn_page2.Bind(wx.EVT_BUTTON, self.go_page2)
-        self.btn_settongs.Bind(wx.EVT_BUTTON, self.run_settings)
-
-
-    def go_page2(self, event):
-        from gui import second_page
-        values = []
-
+    def get_valuse(self):
+        data = []
         name = self.inpt_name.GetValue()
-        name = name.replace(' ', '')
-
         familia = self.inpt_familia.GetValue()
-        familia = familia.replace(' ','')
-        if len(familia) == 0:
-            self.empty_pole()
-            return
-
         group = self.inpt_group.GetValue()
-        group = group.replace(' ','')
-        if len(group) == 0:
-            self.empty_pole()
-            return
+        zachetka = self.inpt_zachetka.GetValue()
+        data.append(name, familia, group, zachetka)
+        return data
 
-        zach_number = self.inpt_zachetka.GetValue()
-        zach_number = zach_number.replace(' ', '')
-        if len(zach_number) == 0:
-            self.empty_pole()
-            return
 
-        values.append(name)
-        values.append(familia)
-        values.append(group)
-        values.append(zach_number)
-
-        print(values)
-        self.frame.Hide()
-        second_page.run_page(self)
-
-    def  run_settings(self, event):
-        from gui import MainSettings
-        MainSettings.run_page()
 
 class MainFrame(wx.Frame):
     def __init__(self, parent):
@@ -132,11 +94,11 @@ class MainFrame(wx.Frame):
         self.Centre(wx.BOTH)
         panel = MainFramePanel(self)
 
-
-
-if __name__ == "__main__":
-    print(" ")
+def run_page():
     app = wx.App(False)
-    frame =  MainFrame(None)
+    frame = MainFrame(None)
     frame.Show()
     app.MainLoop()
+
+if __name__ == "__main__":
+    run_page()

@@ -29,8 +29,8 @@ class SecondPagePanel(wx.Panel):
 
     # Virtual event handlers, overide them in your derived class
     def lab1(self, event):
-        from labs.lab1 import lab1
-        nex_page = lab1.MainFrame()
+        from labs.lab1 import lr1_main
+        nex_page = lr1_main.run_page()
         nex_page.Show()
 
 class SecondPage(wx.Frame):
