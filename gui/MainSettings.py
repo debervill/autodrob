@@ -18,7 +18,7 @@ class MainPanel(wx.Panel):
 
         fgSizer1.Add(self.m_staticText2, 0, wx.ALL, 5)
 
-        self.m_textCtrl2 = wx.TextCtrl(self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0)
+        self.m_textCtrl2 = wx.TextCtrl(self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, style=wx.TE_PASSWORD)
         fgSizer1.Add(self.m_textCtrl2, 0, wx.ALL | wx.ALIGN_CENTER_HORIZONTAL, 5)
 
         self.btn_ok = wx.Button(self, wx.ID_ANY, u"OK", wx.DefaultPosition, wx.Size(60, -1), 0)
