@@ -4,8 +4,8 @@ import wx
 class MainPanel(wx.Panel):
 
     def __init__(self, parent):
-        wx.Panel.__init__(self, parent, id=wx.ID_ANY, pos=wx.DefaultPosition, size=wx.Size(300, 70),
-                          style=wx.TAB_TRAVERSAL)
+        wx.Panel.__init__(self, parent, id=wx.ID_ANY, pos=wx.DefaultPosition, size=wx.Size(200, 70))
+
 
         bSizer1 = wx.BoxSizer(wx.VERTICAL)
 
@@ -50,10 +50,9 @@ class MainPanel(wx.Panel):
 class MainFrame(wx.Frame):
 
     def __init__(self, parent):
-        wx.Frame.__init__(self, parent, id=wx.ID_ANY, title=wx.EmptyString, pos=wx.DefaultPosition,
-                          size=wx.Size(300, 70), style=wx.DEFAULT_FRAME_STYLE | wx.TAB_TRAVERSAL)
+        wx.Frame.__init__(self, None, -1, 'Title', style= wx.SYSTEM_MENU | wx.CAPTION | wx.CLOSE_BOX)
 
-        self.SetSizeHints(wx.DefaultSize, wx.DefaultSize)
+        self.SetSizeHints(70, 70)
 
         self.Centre(wx.BOTH)
         panel = MainPanel(self)
